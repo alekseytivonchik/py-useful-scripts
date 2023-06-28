@@ -1,0 +1,25 @@
+{      
+    "attachments": [
+        {
+            "fallback": "Plain-text summary of the attachment.",
+            "color": "${slack_msg_color}",
+            "author_name": "Kubernetes CronJob",
+            "author_link": "https://url/#",
+            "title": "Job status: ${slack_jobs_status}",
+            "text": "Postgresql Dev Backup",
+            "fields": [
+                {
+                    "title": "Backup info",
+                    "value": "Date: ${current_date}, depth of backups: ${pg_remove_threshold} days",
+                    "short": true
+                },
+                {
+                    "title": "Backup databases",
+                    "value": "${pg_db_names}",
+                    "short": true
+                }
+            ],
+            "footer": "Kubernetes Dev Cotvec"
+        }
+    ]
+}

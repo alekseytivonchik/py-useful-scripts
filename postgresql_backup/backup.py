@@ -103,7 +103,7 @@ def pg_backup_create(list):
         try:
             logger.info(f'Starting backup database: "{db_name}"')
             exec_command(pg_backup_cmd)
-            pg_remove_backup(3, db_name)
+            pg_remove_backup(pg_remove_threshold, db_name)
             logger.info(f'Backup database: "{db_name} successfully completed"')
         except Exception as e:
             global slack_jobs_status
